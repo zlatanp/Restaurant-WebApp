@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="html/css/bootstrap.min.css" />
+<link rel="stylesheet" href="html/css/bootstrap-theme.min.css" />
+<link rel="stylesheet" href="html/css/bootstrap-timepicker.css" />
+<link rel="stylesheet" href="html/css/toastr.css" />
+
+<script src="html/js/jquery-3.1.0.min.js"></script>
+<script src="html/js/jquery.min.js"></script>
+
+<script src="html/js/bootstrap.js"></script>
+<script src="html/js/bootstrap.min.js"></script>
+<script src="html/js/bootstrap-select.js"></script>
+<script src="html/js/bootstrap-timepicker.js"></script>
+<script src="html/js/toastr.js"></script>
+
+<script src="Scripts/Profile.js"></script>
+
+<title>Menadžer sistema</title>
+</head>
+<body style="background-color:#ccffcc">
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="adminPage.html">System management</a>
+			</div>
+
+
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="#" class="OpenNewRest">Novi restoran</a></li>
+					<li><a href="#" class="OpenNewManForRest">Novi menadžer
+							restorana</a></li>
+					<li><a href="#" class="OpenNewSystemMan">Novi menadžer
+							sistema</a></li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a onclick="izlogujSe()" href="#">Odjavite se</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container formWrapper col-lg-offset-3" id="NewRest">
+		<div class="panel panel-default col-lg-6">
+			<div class="panel-heading">
+				<h4>Novi restoran</h4>
+			</div>
+			<div class="panel-body">
+				<form id="NewRestForm">
+					<div class="form-group row">
+						<label class="col-1 col-form-label" for="name">Naziv: </label>
+						<div class="col-6">
+							<input required class="form-control" name="name" type="text" id="nameRest">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-1 col-form-label" for="address">Adresa:
+						</label>
+						<div class="col-6">
+							<input required class="form-control" name="address" type="text"
+								id="addressRest">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-1 col-form-label" for="city">Grad: </label>
+						<div class="col-6">
+							<input required class="form-control" name="city" type="text" id="cityRest">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-1 col-form-label" for="phone">Broj
+							telefona: </label>
+						<div class="col-6">
+							<input required class="form-control" name="phone" type="text" id="phoneRest">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-1 col-form-label" for="email">E-mail: </label>
+						<div class="col-6">
+							<input required class="form-control" name="email" type="email" id="emailRest">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-1 col-form-label" for="description">Opis:
+						</label>
+						<div class="col-6">
+							<input  required class="form-control" name="description" type="text"
+								id="descriptionRest">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-1 col-form-label" for="vremeDO">Radno
+							vreme od: </label>
+						<div class="col-6">
+							<div class="input-group bootstrap-timepicker">
+								<input id="timepickerOD" type="text" class="form-control"
+									name="vremeDO"> <span class="input-group-addon"><i
+									class="glyphicon glyphicon-time"></i></span>
+							</div>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-1 col-form-label" for="vremeDO">Radno
+							vreme do: </label>
+						<div class="col-6">
+							<div class="input-group bootstrap-timepicker">
+								<input id="timepickerDO" type="text" class="form-control"
+									name="vremeDO"> <span class="input-group-addon"><i
+									class="glyphicon glyphicon-time"></i></span>
+							</div>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-1 col-form-label" for="tip">Tip:
+						</label>
+						<div class="col-6">
+							<select class="form-control" id="tipRestSel" name="tip">
+							
+							</select>
+						</div>
+					</div>
+					<div class="form-group row">
+						<button type="submit"
+							class="btn btn-default col-lg-offset-5 col-lg-2" id="btnDodajRestoran">Dodaj</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container formWrapper" id="NewManForRest">
+		<p>Ovde ide forma za novog menadzera restorana</p>
+	</div>
+
+	<div class="container formWrapper" id="NewSystemMan">
+		<p>Ovde ide forma za novog menadzera</p>
+	</div>
+</body>
+</html>
